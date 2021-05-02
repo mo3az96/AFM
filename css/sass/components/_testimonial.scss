@@ -1,0 +1,56 @@
+.testimonial {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+
+    .comment-text {
+        background-color: $sec;
+        padding: 73px;
+        color: #fff;
+
+        p {
+            font-size: 16px;
+        }
+        @include sm {
+            padding: 15px;
+        }
+    }
+
+    .user-info {
+        display: flex;
+        align-items: center;
+        padding: 0 20px 20px;
+        transform: translateY(-17px);
+
+        img {
+            margin: 0 17px;
+        }
+    }
+
+    .name {
+        font-size: 20px;
+        color: $text;
+        font-weight: 700;
+        margin: 0;
+
+        @include rtl {
+            font-family: 'GESS';
+        }
+
+        @include ltr {
+            font-family: 'Helvetica';
+        }
+    }
+
+    .postion {
+        font-size: 14px;
+
+        @include rtl {
+            font-family: 'GESS';
+        }
+
+        @include ltr {
+            font-family: 'Helvetica';
+        }
+    }
+}

@@ -1,0 +1,17 @@
+:root {
+    --primary-color: #f36f2b;
+    --primary-color-rgb: 243, 111, 43;
+    --secondery-color: rgb(15, 42, 85);
+    --secondery-color-rgb: 15, 42, 85;
+    --text-color: #0f2a55;
+    font-size: 16px;
+}
+
+$main:var(--primary-color);
+$sec:var(--secondery-color);
+$black:#231f20;
+$text:var(--text-color);
+$radius:var(--border-radius);
+
+$border:#f0f0f0;
+$back:#f4f4f4;

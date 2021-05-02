@@ -1,0 +1,403 @@
+body {
+    position: relative;
+    background-color: $back;
+
+    @include rtl {
+        font-family: GESS;
+        font-weight: 500;
+    }
+
+    @include ltr {
+        font-family: Calibri;
+        font-weight: 400;
+    }
+
+    &::-webkit-scrollbar {
+        background-color: #fff;
+        width: 7px;
+        height: 0px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $main;
+    }
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: $main #fff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.overflow {
+    overflow: hidden !important;
+}
+
+/* /////////////////////////////////////////////////////////////////////// */
+* {
+    outline: none !important;
+}
+
+.form-control {
+    height: 40px;
+    width: 100%;
+    min-width: 150px;
+    border: 2px solid transparent;
+    background-color: $back;
+    color: $text;
+    font-size: 20px;
+    box-shadow: none;
+    outline: none;
+    resize: none;
+    border-radius: 0;
+    transition: all 0.3s ease-in-out;
+
+    &::placeholder {
+        color: #231f20;
+    }
+
+    &:focus {
+        box-shadow: none;
+        border-color: $main;
+    }
+}
+
+.btn-primary {
+    padding: 0 25px;
+    border-radius: 20px;
+    height: 40px;
+    min-width: 120px;
+    width: max-content;
+    border: 2px solid $main;
+    background-color: $main;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+
+    &::after {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        font-size: 20px;
+
+        @include rtl {
+            content: "\f0d9";
+            margin-right: 10px;
+        }
+
+        @include ltr {
+            content: "\f0da";
+            margin-left: 10px;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        border-color: $main;
+        background-color: transparent;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+textarea {
+    &.form-control {
+        height: 150px;
+    }
+}
+
+.checkbox {
+    position: relative;
+    margin-bottom: 15px;
+    display: flex;
+
+    .mark {
+        width: 17px;
+        height: 17px;
+        background-color: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $main;
+        font-size: 14px;
+        margin: 6px 0 0;
+
+        i {
+            transform: scale(0) rotate(360deg);
+            transition: all 0.3s ease-in-out;
+        }
+
+        @include rtl {
+            margin-left: 11px;
+        }
+
+        @include ltr {
+            margin-right: 11px;
+        }
+    }
+
+    .text {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    input {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+
+        &:checked {
+            ~.mark {
+                i {
+                    transform: scale(1) rotate(0deg);
+                }
+            }
+        }
+    }
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.page-head-sec {
+    position: relative;
+
+    .head-text {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+
+        @include xs {
+            position: relative;
+            top: auto;
+            left: auto;
+            right: auto;
+            transform: none;
+        }
+    }
+
+    @include xs {
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+}
+
+.page-banner {
+    width: 100%;
+    position: relative;
+
+    &::after {
+        background: linear-gradient(0deg, rgba(15, 42, 85, 1) 0%, rgba(15, 42, 85, 0) 100%);
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    @include xs {
+        display: none;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.page-head {
+    width: 665px;
+    background-color: #fff;
+    color: $text;
+    padding: 50px 55px;
+    position: relative;
+
+    @include xs {
+        width: 100%;
+        background-color: transparent;
+        padding: 0;
+        text-align: center;
+    }
+
+    .hint {
+        font-size: 18px;
+        color: #7c7a7a;
+        display: block;
+        position: absolute;
+        top: 20px;
+
+        @include rtl {
+            font-family: 'GESS';
+            left: 23px;
+        }
+
+        @include ltr {
+            font-family: 'Helvetica';
+            right: 23px;
+        }
+
+        @include xs {
+            display: none;
+        }
+    }
+
+    .page-title {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 0.986;
+        margin-bottom: 0;
+        text-transform: uppercase;
+
+        @include rtl {
+            font-family: 'GESS';
+        }
+
+        @include ltr {
+            font-family: 'Helvetica';
+        }
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 1.2;
+        color: $black;
+        width: 100%;
+        max-width: 520px;
+        margin-top: 20px;
+
+        @include rtl {
+            font-family: 'GESS';
+        }
+
+        @include ltr {
+            font-family: 'Helvetica';
+        }
+
+        @include sm {
+            max-width: 100%;
+            text-align: justify;
+        }
+
+    }
+
+    .page-date {
+        font-size: 20px;
+        color: $main;
+        font-style: italic;
+        display: block;
+        font-weight: 300;
+        margin-bottom: 10px;
+
+        @include rtl {
+            font-family: 'GESS';
+        }
+
+        @include ltr {
+            font-family: 'Helvetica';
+        }
+    }
+
+    ul {
+        font-size: 20px;
+        line-height: 1.2;
+        color: $black;
+        width: 100%;
+        max-width: 520px;
+        margin-top: 20px;
+        margin-bottom: 0;
+
+        @include rtl {
+            font-family: 'GESS';
+        }
+
+        @include ltr {
+            font-family: 'Helvetica';
+        }
+
+        @include sm {
+            max-width: 100%;
+            text-align: justify;
+        }
+
+        li {
+            padding-top: 20px;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.grid-item {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.related-div {
+    margin-bottom: 110px;
+
+    @include xs {
+        margin: 0 0 70px;
+    }
+}
+
+.related-title {
+    font-size: 32px;
+    color: $text;
+    font-weight: 700;
+    margin-bottom: 40px;
+
+    @include rtl {
+        font-family: 'GESS';
+    }
+
+    @include ltr {
+        font-family: 'Helvetica';
+    }
+
+    @include sm {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+}

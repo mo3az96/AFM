@@ -1,0 +1,142 @@
+.news {
+    position: relative;
+    background-color: #fff;
+    margin-bottom: 15px;
+
+    .news-img {
+        display: block;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover,
+        &:focus {
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .news-desc {
+        padding: 29px 30px 0;
+    }
+
+    .news-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        &::before {
+            height: 6px;
+            width: 33px;
+            content: "";
+            display: block;
+            background-color: $main;
+            position: absolute;
+            top: 0;
+
+            @include rtl {
+                right: 0;
+            }
+
+            @include ltr {
+                left: 0;
+            }
+        }
+    }
+
+    .news-name {
+        margin: 0 0 18px;
+
+        a {
+            font-size: 20px;
+            color: $text;
+            font-weight: 700;
+            transition: all 0.3s ease-in-out;
+
+            @include rtl {
+                font-family: 'GESS';
+            }
+
+            @include ltr {
+                font-family: 'Helvetica';
+            }
+
+            &:hover,
+            &:focus {
+                color: $main;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .date {
+        font-size: 14px;
+        color: $text;
+        font-weight: 700;
+        white-space: nowrap;
+
+        @include rtl {
+            font-family: 'GESS';
+        }
+
+        @include ltr {
+            font-family: 'Helvetica';
+        }
+    }
+
+    .news-text {
+        color: #333333;
+        font-size: 16px;
+
+        @include rtl {
+            font-family: 'GESS';
+        }
+
+        @include ltr {
+            font-family: 'Helvetica';
+        }
+    }
+
+    .read-more {
+        border-radius: 15px;
+        width: 157px;
+        height: 30px;
+        background-color: $main;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 15px 0 0;
+        transform: translateY(50%);
+        transition: all 0.3s ease-in-out;
+
+        &::after {
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 12px;
+
+            @include rtl {
+                content: "\f0d9";
+                margin-right: 10px;
+            }
+
+            @include ltr {
+                content: "\f0da";
+                margin-left: 10px;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $sec;
+            text-decoration: none;
+        }
+    }
+}

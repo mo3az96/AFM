@@ -1,0 +1,279 @@
+.about-page-section {
+
+    .page-head-sec {
+        z-index: 2;
+
+        .head-text {
+            position: absolute;
+            bottom: -10%;
+            top: auto;
+            transform: none;
+
+            @include xs {
+                position: relative;
+                bottom: auto;
+            }
+        }
+
+        @include xs {
+            margin-bottom: 40px;
+            margin-top: 40px;
+        }
+    }
+}
+
+.missionVison {
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+
+    @include sm {
+        padding: 30px 0;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+}
+
+.missionVison-text-sec {
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    right: 0;
+
+    @include sm {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        width: 100%;
+    }
+}
+
+.missionVison-text-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    @include sm {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+}
+
+.missionVison-text {
+    padding: 35px 30px;
+    background-color: rgba(var(--secondery-color-rgb), 0.95);
+    color: #fff;
+
+    @include sm {
+        padding: 20px 15px;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 30px;
+
+        @include rtl {
+            font-family: 'GESS';
+        }
+
+        @include ltr {
+            font-family: 'Helvetica';
+        }
+
+        @include sm {
+            text-align: center;
+        }
+    }
+
+    p {
+        font-size: 20px;
+
+        @include rtl {
+            font-family: 'GESS';
+        }
+
+        @include ltr {
+            font-family: 'Helvetica';
+        }
+
+        @include sm {
+            text-align: justify;
+        }
+    }
+}
+
+.white-sec {
+    padding-top: 175px;
+    background-color: #fff;
+
+    @include sm {
+        padding-top: 70px;
+    }
+}
+
+.Principles {
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        color: $text;
+
+        @include rtl {
+            font-family: 'GESS';
+        }
+
+        @include ltr {
+            font-family: 'Helvetica';
+        }
+
+        @include sm {
+            text-align: center;
+        }
+    }
+
+    p {
+        font-size: 20px;
+        color: $black;
+
+        @include rtl {
+            font-family: 'GESS';
+        }
+
+        @include ltr {
+            font-family: 'Helvetica';
+        }
+
+        @include sm {
+            text-align: justify;
+        }
+    }
+}
+
+.about-feats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-top: 70px;
+    padding-bottom: 80px;
+
+    @include sm {
+        grid-template-columns: repeat(3, 1fr);
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    @include xs {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+}
+
+.about-feat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .feat-img {
+        width: 87px;
+        height: 87px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .feat-name {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 0;
+        margin-top: 35px;
+        color: $text;
+        text-transform: uppercase;
+
+        @include rtl {
+            font-family: 'GESS';
+        }
+
+        @include ltr {
+            font-family: 'Helvetica';
+        }
+
+        &:first-letter {
+            color: $main;
+        }
+    }
+}
+
+.accreditations-sec {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.accreditations-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 2fr 3fr;
+
+    @include sm {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.accreditations-text {
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        color: $text;
+
+        @include rtl {
+            font-family: 'GESS';
+        }
+
+        @include ltr {
+            font-family: 'Helvetica';
+        }
+
+        @include sm {
+            text-align: center;
+        }
+    }
+
+    p {
+        font-size: 20px;
+        color: $black;
+
+        @include rtl {
+            font-family: 'GESS';
+        }
+
+        @include ltr {
+            font-family: 'Helvetica';
+        }
+
+        @include sm {
+            text-align: justify;
+        }
+    }
+}
+
+.accreditations-logos {
+    display: flex;
+    justify-content: center;
+}

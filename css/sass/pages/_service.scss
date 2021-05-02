@@ -1,0 +1,135 @@
+.service-feats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 80px;
+
+    @include sm {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include xs {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+}
+
+.service-feat {
+    @include xs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .feat-img {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .feat-name {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 0;
+        margin-top: 35px;
+        color: $text;
+
+        @include rtl {
+            font-family: 'GESS';
+        }
+
+        @include ltr {
+            font-family: 'Helvetica';
+        }
+    }
+}
+
+.Request-sec {
+    background-color: $sec;
+    padding: 60px 0 40px;
+    color: #fff;
+
+    .btn-primary {
+        @include rtl {
+            margin-right: auto;
+
+            @include xs {
+                margin: 25px auto 0;
+            }
+        }
+
+        @include ltr {
+            margin-left: auto;
+
+            @include xs {
+                margin: 25px auto 0;
+            }
+        }
+    }
+}
+
+.Request-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+
+    @include rtl {
+        font-family: 'GESS';
+    }
+
+    @include ltr {
+        font-family: 'Helvetica';
+    }
+
+    @include xs {
+        text-align: center;
+        font-size: 28px;
+    }
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+
+    @include sm {
+        gap: 15px;
+    }
+
+    @include xs {
+        grid-template-columns: 1fr;
+    }
+
+    .hint {
+        font-size: 20px;
+        margin-bottom: 25px;
+        display: block;
+
+        @include rtl {
+            font-family: 'GESS';
+        }
+
+        @include ltr {
+            font-family: 'Helvetica';
+        }
+
+        @include xs {
+            text-align: center;
+        }
+    }
+}
+
+.service-page-section {
+    .page-head-sec {
+        margin-bottom: 200px;
+
+        @include xs {
+            margin-bottom: 40px;
+            margin-top: 40px;
+        }
+    }
+}

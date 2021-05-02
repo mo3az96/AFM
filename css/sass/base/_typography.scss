@@ -1,0 +1,135 @@
+////////////////////////////////////////////////////////////////////////////////////// English
+/* Calibri */
+@font-face {
+    font-family: 'Calibri';
+    src: url('../fonts/Calibri/Calibri-Light.woff2') format('woff2'),
+        url('../fonts/Calibri/Calibri-Light.woff') format('woff'),
+        url('../fonts/Calibri/Calibri-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('../fonts/Calibri/Calibri-LightItalic.woff2') format('woff2'),
+        url('../fonts/Calibri/Calibri-LightItalic.woff') format('woff'),
+        url('../fonts/Calibri/Calibri-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('../fonts/Calibri/Calibri.woff2') format('woff2'),
+        url('../fonts/Calibri/Calibri.woff') format('woff'),
+        url('../fonts/Calibri/Calibri.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('../fonts/Calibri/Calibri-Italic.woff2') format('woff2'),
+        url('../fonts/Calibri/Calibri-Italic.woff') format('woff'),
+        url('../fonts/Calibri/Calibri-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('../fonts/Calibri/Calibri-Bold.woff2') format('woff2'),
+        url('../fonts/Calibri/Calibri-Bold.woff') format('woff'),
+        url('../fonts/Calibri/Calibri-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('../fonts/Calibri/Calibri-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Calibri/Calibri-BoldItalic.woff') format('woff'),
+        url('../fonts/Calibri/Calibri-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Helvetica */
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/Helvetica/Helvetica-Light.woff2') format('woff2'),
+        url('../fonts/Helvetica/Helvetica-Light.woff') format('woff'),
+        url('../fonts/Helvetica/Helvetica-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/Helvetica/Helvetica.woff2') format('woff2'),
+        url('../fonts/Helvetica/Helvetica.woff') format('woff'),
+        url('../fonts/Helvetica/Helvetica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/Helvetica/Helvetica-Bold.woff2') format('woff2'),
+        url('../fonts/Helvetica/Helvetica-Bold.woff') format('woff'),
+        url('../fonts/Helvetica/Helvetica-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/Helvetica/Helvetica-BoldOblique.woff2') format('woff2'),
+        url('../fonts/Helvetica/Helvetica-BoldOblique.woff') format('woff'),
+        url('../fonts/Helvetica/Helvetica-BoldOblique.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////// arabic
+/* GESS */
+@font-face {
+    font-family: 'GESS';
+    src: url('../fonts/GESS/GESSTwoLight-Light.woff2') format('woff2'),
+        url('../fonts/GESS/GESSTwoLight-Light.woff') format('woff'),
+        url('../fonts/GESS/GESSTwoLight-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GESS';
+    src: url('../fonts/GESS/GESSTwoMedium-Medium.woff2') format('woff2'),
+        url('../fonts/GESS/GESSTwoMedium-Medium.woff') format('woff'),
+        url('../fonts/GESS/GESSTwoMedium-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GESS';
+    src: url('../fonts/GESS/GESSTwoBold-Bold.woff2') format('woff2'),
+        url('../fonts/GESS/GESSTwoBold-Bold.woff') format('woff'),
+        url('../fonts/GESS/GESSTwoBold-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

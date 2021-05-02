@@ -1,0 +1,236 @@
+.sec-head {
+    font-size: 36px;
+    color: $text;
+    margin: 0;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+
+    @include rtl {
+        font-family: 'GESS';
+    }
+
+    @include ltr {
+        font-family: 'Helvetica';
+    }
+
+    @include sm {
+        font-size: 24px;
+    }
+}
+
+.home_body {
+    section {
+        margin-top: 65px;
+
+        &.services-section {
+            padding-bottom: 124px;
+
+            @include sm {
+                padding-bottom: 40px;
+            }
+        }
+
+        &.testimonials-section {
+            padding-top: 65px;
+            margin: 0;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 273px;
+                background-color: #fff;
+                z-index: -1;
+                content: "";
+            }
+        }
+
+        &.clients-section {
+            background-color: #fff;
+            padding: 15px 0;
+        }
+    }
+}
+
+.clients-section {
+    background-color: #fff;
+    padding: 15px 0;
+}
+
+.about-home {
+    position: relative;
+    padding-bottom: 70px;
+
+    @include sm {
+        padding-bottom: 30px;
+    }
+
+    .about-img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+
+        @include rtl {
+            left: 0;
+        }
+
+        @include ltr {
+            right: 0;
+        }
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    .sec-head {
+        position: relative;
+        z-index: 2;
+
+        @include rtl {
+            text-align: right;
+        }
+
+        @include ltr {
+            text-align: left;
+        }
+
+        @include sm {
+            @include rtl {
+                text-align: center;
+            }
+
+            @include ltr {
+                text-align: center;
+            }
+        }
+    }
+
+    .about-text {
+        background-color: $back;
+        width: 580px;
+        position: relative;
+        z-index: 2;
+        padding: 45px 0;
+
+        @include rtl {
+            padding-left: 50px;
+        }
+
+        @include ltr {
+            padding-right: 50px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.488;
+            color: $text;
+
+            @include rtl {
+                font-family: 'GESS';
+            }
+
+            @include ltr {
+                font-family: 'Helvetica';
+            }
+        }
+
+        a {
+            border-radius: 15px;
+            width: 183px;
+            height: 35px;
+            background-color: $main;
+            font-size: 18px;
+            color: #fff;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0 0;
+            transition: all 0.3s ease-in-out;
+
+            &::after {
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                font-size: 25px;
+
+                @include rtl {
+                    content: "\f0d9";
+                    margin-right: 10px;
+                }
+
+                @include ltr {
+                    content: "\f0da";
+                    margin-left: 10px;
+                }
+            }
+
+            &:hover,
+            &:focus {
+                background-color: $sec;
+                text-decoration: none;
+            }
+
+            @include sm {
+                margin: 15px auto 0;
+            }
+        }
+
+        @include sm {
+            width: 100%;
+            text-align: justify;
+
+            @include rtl {
+                padding: 0;
+            }
+
+            @include ltr {
+                padding: 0;
+            }
+        }
+    }
+}
+
+.all-elements {
+    padding: 0 45px;
+    border-radius: 15px;
+    height: 40px;
+    width: max-content;
+    background-color: $sec;
+    font-size: 21px;
+    color: #fff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 35px auto 0;
+    transition: all 0.3s ease-in-out;
+
+    &::after {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        font-size: 25px;
+
+        @include rtl {
+            content: "\f0d9";
+            margin-right: 10px;
+        }
+
+        @include ltr {
+            content: "\f0da";
+            margin-left: 10px;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $main;
+        color: #fff;
+        text-decoration: none;
+    }
+}

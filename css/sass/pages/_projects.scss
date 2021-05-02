@@ -1,0 +1,113 @@
+.projects-head-text {
+    .page-head {
+        background-color: transparent;
+    }
+
+    .page-head {
+        width: 100%;
+
+        p {
+            max-width: 720px;
+        }
+    }
+}
+
+.projects-filters {
+    padding: 0 55px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    @include sm {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+}
+
+.filter-title {
+    font-size: 24px;
+    color: $text;
+    margin: 0;
+
+    @include rtl {
+        margin-left: 35px;
+        font-family: 'GESS';
+
+        @include sm {
+            margin: 0 0 10px;
+        }
+    }
+
+    @include ltr {
+        margin-right: 35px;
+        font-family: 'Helvetica';
+
+        @include sm {
+            margin: 0 0 10px;
+        }
+    }
+}
+
+.filter-links {
+    display: flex;
+    align-items: center;
+
+    @include sm {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.filter-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    border-radius: 15px;
+    padding: 0 25px;
+    font-size: 24px;
+    color: $text;
+    margin: 0 5px;
+    transition: all 0.3s ease-in-out;
+
+    @include rtl {
+        font-family: 'GESS';
+    }
+
+    @include ltr {
+        font-family: 'Helvetica';
+    }
+
+    &:hover {
+        color: $main;
+        text-decoration: none;
+    }
+
+    &.active {
+        background-color: $main;
+        color: #fff;
+    }
+
+    @include sm {
+        padding: 0 15px;
+        margin: 5px;
+    }
+}
+
+.home-projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include sm {
+        grid-template-columns: 1fr;
+    }
+}
+
+.projects-head-text {
+    @include sm {
+        margin: 40px 0;
+    }
+}

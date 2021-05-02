@@ -1,0 +1,164 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 85px;
+    @include sm{
+        padding: 15px 0;
+    }
+}
+
+.logo {
+    display: block;
+    width: 129px;
+
+    @include xs {
+        width: 100px;
+    }
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+
+    @include md {
+        display: none;
+    }
+}
+
+.social {
+    font-size: 20px;
+    color: #fff;
+    margin: 0 10px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+        color: $main;
+        text-decoration: none;
+    }
+}
+
+.langs {
+    display: flex;
+    align-items: center;
+
+    @include rtl {
+        margin-right: 15px;
+    }
+
+    @include ltr {
+        margin-left: 15px;
+    }
+}
+
+.lang-div {
+    ~.lang-div {
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: "I";
+            margin: 0 4px;
+            color: #fff;
+
+            @include rtl {
+                font-family: Calibri;
+            }
+        }
+    }
+}
+
+.lang {
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+        color: $main;
+        text-decoration: none;
+    }
+
+    &.active {
+        color: $main;
+        pointer-events: none;
+    }
+
+    @include ltr {
+        font-size: 20px;
+        font-weight: 700;
+
+        &.lang-ar {
+            font-size: 12px;
+            font-weight: 500;
+            font-family: GESS;
+        }
+    }
+
+    @include rtl {
+        font-size: 12px;
+        font-weight: 500;
+
+        &.lang-en {
+            font-size: 20px;
+            font-weight: 700;
+            font-family: Calibri;
+        }
+    }
+}
+
+body {
+    &.home_body {
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 99;
+        }
+    }
+
+    &:not(.home_body) {
+        header {
+            background-color: #fff;
+        }
+
+        .header {
+            .social {
+                color: $text;
+
+                &:hover,
+                &:focus {
+                    color: $main;
+                }
+            }
+        }
+
+        .lang-div {
+            ~.lang-div {
+                &::before {
+                    color: $text;
+                }
+            }
+        }
+
+        .lang {
+            color: $text;
+
+            &:hover,
+            &:focus {
+                color: $main;
+            }
+
+            &.active {
+                color: $main;
+            }
+        }
+    }
+}

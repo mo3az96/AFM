@@ -1,0 +1,132 @@
+.map {
+    height: 660px;
+}
+
+.contact-page-section {
+    position: relative;
+    padding-top: 85px;
+    padding-bottom: 120px;
+
+    &::after {
+        width: 50%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: $sec;
+        content: "";
+        z-index: -1;
+
+        @include rtl {
+            left: 0;
+        }
+
+        @include ltr {
+            right: 0;
+        }
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    @include sm {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .container {
+            padding: 0;
+            width: 100%;
+            min-width: 100%;
+        }
+    }
+}
+
+.contact-info-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include sm {
+        grid-template-columns: 1fr;
+    }
+}
+
+.conatct-title {
+    margin-bottom: 40px;
+
+    @include rtl {
+        font-family: 'GESS';
+    }
+
+    @include ltr {
+        font-family: 'Helvetica';
+    }
+
+    @include sm {
+        font-size: 23px;
+    }
+}
+
+.contact-info {
+    color: $black;
+
+    @include sm {
+        padding: 60px 15px 40px;
+        text-align: center;
+    }
+}
+
+.contact-method {
+    margin-bottom: 30px;
+
+    @include rtl {
+        font-family: 'GESS';
+    }
+
+    @include ltr {
+        font-family: 'Helvetica';
+    }
+
+    .method-title {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .method-desc {
+        font-size: 20px;
+    }
+}
+
+.contact-form {
+    color: #fff;
+
+    @include rtl {
+        padding-right: 85px;
+    }
+
+    @include ltr {
+        padding-left: 85px;
+    }
+
+    .btn-primary {
+        @include rtl {
+            margin-right: auto;
+        }
+
+        @include ltr {
+            margin-left: auto;
+        }
+    }
+
+    @include sm {
+        background-color: $sec;
+        text-align: center;
+
+        @include rtl {
+            padding: 40px 15px 60px;
+        }
+
+        @include ltr {
+            padding: 40px 15px 60px;
+        }
+    }
+}

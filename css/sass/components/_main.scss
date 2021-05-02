@@ -1,0 +1,148 @@
+.main-slider {
+    position: relative;
+
+    .slider-img {
+        display: block;
+        width: 100%;
+        position: relative;
+
+        &::after {
+            background: linear-gradient(0deg, rgba(15, 42, 85, 1) 0%, rgba(15, 42, 85, 0) 100%);
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    img {
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+
+        @include xs {
+            height: 600px;
+        }
+    }
+}
+
+
+.main-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    color: $text;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+
+    @include xs {
+        text-align: center;
+    }
+
+    h6 {
+        font-size: 27.34px;
+        font-family: 'Helvetica';
+        font-weight: 400;
+        margin: 5px 0 0;
+
+        @include rtl {
+            font-family: 'GESS';
+            font-weight: 500;
+        }
+
+        &:first-of-type {
+            margin: 0 0;
+
+            &::before {
+                height: 7px;
+                width: 67px;
+                content: "";
+                display: block;
+                background-color: $main;
+                margin-bottom: 10px;
+
+                @include xs {
+                    margin: 0 auto 10px;
+                }
+            }
+        }
+
+        @include xs {
+            font-size: 20px;
+        }
+    }
+
+    h1 {
+        font-size: 46.52px;
+        font-family: 'Helvetica';
+        font-weight: 700;
+        font-style: italic;
+        margin: 18px 0 0;
+
+        @include rtl {
+            font-family: 'GESS';
+            font-weight: 700;
+        }
+
+        @include xs {
+            font-size: 30px;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        color: #fff;
+        width: 312px;
+        line-height: 1.688;
+        margin: 14px 0 0;
+
+        @include xs {
+            width: 100%;
+        }
+    }
+
+    a {
+        border-radius: 15px;
+        width: 183px;
+        height: 35px;
+        background-color: $main;
+        font-size: 18px;
+        color: #fff;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 15px 0 0;
+        transition: all 0.3s ease-in-out;
+
+        &::after {
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 25px;
+
+            @include rtl {
+                content: "\f0d9";
+                margin-right: 10px;
+            }
+
+            @include ltr {
+                content: "\f0da";
+                margin-left: 10px;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $sec;
+            text-decoration: none;
+        }
+
+        @include xs {
+            margin: 25px auto 0;
+        }
+    }
+}
